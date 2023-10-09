@@ -1,6 +1,4 @@
-Certainly! Here's a `README.md` file that includes instructions for setting up and running the server, as well as a brief overview of the basic features of the service:
-
-```markdown
+```
 # Node Express TypeScript CRUD API
 
 This is a sample Node.js, Express.js, and TypeScript CRUD API project for managing user data, including user roles and images.
