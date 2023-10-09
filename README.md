@@ -1,4 +1,3 @@
-```
 # Node Express TypeScript CRUD API
 
 This is a sample Node.js, Express.js, and TypeScript CRUD API project for managing user data, including user roles and images.
