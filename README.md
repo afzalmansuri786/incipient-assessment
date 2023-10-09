@@ -67,15 +67,3 @@ The server will start at `http://localhost:3000`.
 - **Delete Role**: Delete a role if it's not assigned to any user.
 
 Please refer to the API documentation for detailed usage of these features.
-
-## API Documentation
-
-For detailed API documentation and endpoint usage, refer to the project's API documentation or Swagger documentation at `http://localhost:3000/api-docs` when the server is running.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-```
-
-Replace `yourusername/your-repo` with the actual Git repository URL for your project. Also, make sure to update the project's features and documentation links as needed.
