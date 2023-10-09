@@ -66,4 +66,47 @@ The server will start at `http://localhost:3000`.
 
 - **Delete Role**: Delete a role if it's not assigned to any user.
 
-Please refer to the API documentation for detailed usage of these features.
+Please refer to the below API documentation in tabular form for detailed usage of these features.
+
+Here's a tabular format listing the APIs, their routes, required input data, and output data types for the `/users`, `/user-images`, `/roles`, and `/user-roles` routes:
+
+### `/users` Endpoints
+
+| Endpoint                                      | Method | Description                             | Input Data (JSON)                                       | Output Data (JSON)                  |
+|-----------------------------------------------|--------|-----------------------------------------|---------------------------------------------------------|------------------------------------|
+| `/users/create`                               | POST   | Create a user                           | User data including first name, last name, email, etc. | Created user data                  |
+| `/users`                                      | GET    | Retrieve all users with assigned roles | None                                                    | List of users with roles           |
+| `/users/:id`                                  | GET    | Retrieve a single user by ID           | User ID                                                 | Single user data                   |
+| `/users/:userId/allDetails`                   | GET    | Retrieve a single user with all details | User ID                                                 | User details with roles and images |
+| `/users/:id`                                  | PUT    | Update a user                           | User ID, updated user data                              | Updated user data                  |
+| `/users/:id`                                  | DELETE | Soft delete a user                     | User ID                                                 | None                               |
+
+### `/user-images` Endpoints
+
+| Endpoint                    | Method | Description          | Input Data (JSON)  | Output Data (JSON)  |
+|-----------------------------|--------|----------------------|--------------------|--------------------|
+| `/user-images/upload`       | POST   | Upload a user image  | User ID, image file | Uploaded image data |
+| `/user-images/:id`         | GET    | Get user image by ID | Image ID           | User image data     |
+| `/user-images/:id`         | PUT    | Update user image    | Image ID, new image | Updated image data  |
+| `/user-images/:id`         | DELETE | Delete user image    | Image ID           | None                |
+
+### `/roles` Endpoints
+
+| Endpoint                 | Method | Description     | Input Data (JSON) | Output Data (JSON) |
+|--------------------------|--------|-----------------|-------------------|-------------------|
+| `/roles/create-role`     | POST   | Create a role   | Role name         | Created role data  |
+| `/roles`                 | GET    | Get all roles   | None              | List of roles      |
+| `/roles/:id`             | GET    | Get role by ID  | Role ID           | Role data          |
+| `/roles/:id`             | PUT    | Update a role   | Role ID, new name | Updated role data  |
+| `/roles/:id`             | DELETE | Delete a role   | Role ID           | None               |
+
+### `/user-roles` Endpoints
+
+| Endpoint                | Method | Description           | Input Data (JSON)       | Output Data (JSON) |
+|-------------------------|--------|-----------------------|-------------------------|-------------------|
+| `/user-roles/create`    | POST   | Create a user role    | User ID, Role ID        | Created user role |
+| `/user-roles`           | GET    | Get all user roles    | None                    | List of user roles |
+| `/user-roles/:id`       | GET    | Get user role by ID   | User Role ID            | User role data     |
+| `/user-roles/:id`       | PUT    | Update a user role    | User Role ID, new data  | Updated user role |
+| `/user-roles/:id`       | DELETE | Delete a user role    | User Role ID            | None              |
+
